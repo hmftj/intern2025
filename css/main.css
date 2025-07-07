@@ -1,0 +1,13 @@
+*{background:grey;color:#ffffff}
+
+h1{color:rgb(25, 78, 45)}
+
+.parent{display:flex;}
+
+.h{position:fixed;width:1200px;background:rgba(255,34,45,1);height:100px}
+
+.c1{margin-top:100px;width:400px;position:relative;background:white;}
+.c2{margin-top:100px;width:400px;position:relative;background:crimson;}
+.c3{margin-top:100px;width:400px;position:relative;background:purple;}
+
+.f{margin-top:0px;width:1200px;background:blue;position:relative}
