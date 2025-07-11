@@ -1,0 +1,99 @@
+/* FIVE STAR RATING */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgb(22, 22, 122);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 40%;
+  background-color: #a8c8c9;
+  margin: 50px auto;
+  padding: 30px;
+  border: 2px solid #8cabc9;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.rating,
+.review {
+  font-size: 32px;
+  color: #111fa0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.star {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0ffff;
+  border: 2px solid #1725a8;
+  height: 80px;
+  width: 420px;
+  margin: 0 auto 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.star i {
+  font-size: 50px;
+  color: gray;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.star i:hover,
+.star i:hover ~ i {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.star i.selected {
+  color: gold;
+}
+
+.review-para {
+  height: 180px;
+  width: 90%;
+  border: 2px solid #1725a8;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+}
+
+.input-review {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  resize: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn {
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 12px 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #111fa0;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #201981;
+  transform: scale(1.05);
+}
