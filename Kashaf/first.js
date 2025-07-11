@@ -31,7 +31,7 @@ button.addEventListener('click', () => {
 
   // Reset the stars
   stars.forEach(star => star.classList.remove('selected'));
-  rating = 0;
+  
 
   // Now show alert (after clearing)
   alert("Review submitted successfully.");
