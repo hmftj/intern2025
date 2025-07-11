@@ -1,33 +1,42 @@
-const stars=document.querySelectorAll('.star i');
-let rating=0;
+const stars = document.querySelectorAll('.star i');
+let rating = 0;
 
-stars.forEach((star,index)=>{
-    star.addEventListener('click',()=>{
-        rating=stars.length-index;
-        updateStars(rating);
-    });
+// Star click handler
+stars.forEach((star, index) => {
+  star.addEventListener('click', () => {
+    rating = stars.length - index;
+    updateStars(rating);
+  });
 });
 
-function updateStars(rating){
-    stars.forEach((star,index)=>{
-        if(stars.length-index<= rating)
-        {
-            star.classList.add('selected');
-        }
-        else{
-            star.classList.remove('selected');
-        }
-    });
+function updateStars(rating) {
+  stars.forEach((star, index) => {
+    if ((stars.length - index) <= rating) {
+      star.classList.add('selected');
+    } else {
+      star.classList.remove('selected');
+    }
+  });
 }
 
-const inputReview=document.querySelector('.input-review');
-const button=document.querySelector('.btn');
-button.addEventListener('click',()=>{
-    console.log(inputReview.value);
-    inputReview.value="";
-    alert("Review submitted successfully.")
-})
+// Submit button handler
+const inputReview = document.querySelector('.input-review');
+const button = document.querySelector('.btn');
 
+button.addEventListener('click', () => {
+  const reviewText = inputReview.value;
 
+  // Clear the review box first
+  inputReview.value = "";
 
+  // Reset the stars
+  stars.forEach(star => star.classList.remove('selected'));
+  rating = 0;
 
+  // Now show alert (after clearing)
+  alert("Review submitted successfully.");
+
+  // Optionally log the data
+  console.log("Rating:", rating);
+  console.log("Review:", reviewText);
+});
