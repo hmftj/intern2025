@@ -24,15 +24,18 @@ const inputReview = document.querySelector('.input-review');
 const button = document.querySelector('.btn');
 
 button.addEventListener('click', () => {
-  const reviewText = inputReview.value;
-
+  if(inputReview.value!=""){
+    const reviewText = inputReview.value;
+  }else{
+    alert("Please write your feedback.");
+  }
+  
   // Clear the review box first
   inputReview.value = "";
 
   // Reset the stars
   stars.forEach(star => star.classList.remove('selected'));
   
-
   // Now show alert (after clearing)
   alert("Review submitted successfully.");
 
