@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
 <body>
  
     <div class="container">
-    <h1 class="rating">Rating:</h1>
+    <h1 class="rating"><i>Rating:</i></h1>
     <div class="star">
       <i class="fa-solid fa-star"></i>
       <i class="fa-solid fa-star"></i>
@@ -19,65 +19,21 @@
       <i class="fa-solid fa-star"></i>
     </div>
 
-    <h1 class="review">Reviews:</h1>
+    <h1 class="review"><i>Reviews:</i></h1>
     <div class="review-para">
       <textarea class="input-review" placeholder="Write your review here..."></textarea>
     </div>
 
     <button class="btn">Submit Review</button>
+     <div class="all-messages">
+      <h1 class="message-board"><b><i>Message Board</i></b></h1>
+        <div class="messages-list"></div>
+      </div>
   </div>
   
 
   <script src="first.js"></script>
 </body>
 </html> 
-   -->
+   
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Five‑Star Rating</title>
-
-    <!-- Icons + your stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h2>Give us a rating</h2>
-
-      <!-- pick‑a‑star row -->
-      <div id="starBox" class="star">
-        <!-- 5 identical icons – value is in data‑val -->
-        <i class="fa-solid fa-star" data-val="1"></i>
-        <i class="fa-solid fa-star" data-val="2"></i>
-        <i class="fa-solid fa-star" data-val="3"></i>
-        <i class="fa-solid fa-star" data-val="4"></i>
-        <i class="fa-solid fa-star" data-val="5"></i>
-      </div>
-
-      <textarea
-        id="comment"
-        class="input-review"
-        placeholder="Write your review here…"
-      ></textarea>
-      <input id="name" placeholder="Your name (optional)" />
-      <button id="send" class="btn">Submit review</button>
-
-      <!-- live stats -->
-      <h3>Average: <span id="avg">0</span> ★</h3>
-      <div id="breakdown"></div>
-
-      <!-- all reviews will be injected here -->
-      <h3>Reviews</h3>
-      <div id="reviews"></div>
-    </div>
-
-    <script src="first.js" defer></script>
-  </body>
-</html>
